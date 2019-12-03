@@ -42,15 +42,29 @@ let logo = document.getElementById("logo-img");
 logo.setAttribute('src', siteContent["nav"]["img-src"]);
 
 // navigation bar
-let navBar = document.querySelectorAll("nav");
-navBar[0].children[0].textContent = siteContent["nav"]["nav-item-1"];
-navBar[0].children[1].textContent = siteContent["nav"]["nav-item-2"];
-navBar[0].children[2].textContent = siteContent["nav"]["nav-item-3"];
-navBar[0].children[3].textContent = siteContent["nav"]["nav-item-4"];
-navBar[0].children[4].textContent = siteContent["nav"]["nav-item-5"];
-navBar[0].children[5].textContent = siteContent["nav"]["nav-item-6"];
+let navBar = document.querySelectorAll("nav a");
+navBar[0].textContent = siteContent["nav"]["nav-item-1"];
+navBar[1].textContent = siteContent["nav"]["nav-item-2"];
+navBar[2].textContent = siteContent["nav"]["nav-item-3"];
+navBar[3].textContent = siteContent["nav"]["nav-item-4"];
+navBar[4].textContent = siteContent["nav"]["nav-item-5"];
+navBar[5].textContent = siteContent["nav"]["nav-item-6"];
 
-let green = navBar.forEach(item => item.style.color = "green");
+
+// part 3 MVP
+
+// 1. green
+let greenNavBar = navBar.forEach(item => item.style.color = "green");
+
+// 2. appendChild
+
+let newNavItem = document.createElement("a").textContent = "TESTING";
+let newParent = document.querySelector("nav");
+newParent.append(newNavItem);
+
+// 3. prepend 
+newParent.prepend(newNavItem);
+
 
 // header
 let title = document.querySelectorAll(".cta-text");
