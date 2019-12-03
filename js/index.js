@@ -81,30 +81,51 @@ centerImg.setAttribute('src', siteContent["main-content"]["middle-img-src"]);
 // body
 let main = document.querySelectorAll(".text-content");
 
-main[0].children[0].textContent = siteContent["main-content"]["features-h4"];
-main[0].children[1].textContent = siteContent["main-content"]["features-content"];
+// main[0].children[0].textContent = siteContent["main-content"]["features-h4"];
+// main[0].children[1].textContent = siteContent["main-content"]["features-content"];
 
-main[1].children[0].textContent = siteContent["main-content"]["about-h4"];
-main[1].children[1].textContent = siteContent["main-content"]["about-content"];
+// main[1].children[0].textContent = siteContent["main-content"]["about-h4"];
+// main[1].children[1].textContent = siteContent["main-content"]["about-content"];
 
-main[2].children[0].textContent = siteContent["main-content"]["services-h4"];
-main[2].children[1].textContent = siteContent["main-content"]["services-content"];
+// main[2].children[0].textContent = siteContent["main-content"]["services-h4"];
+// main[2].children[1].textContent = siteContent["main-content"]["services-content"];
 
-main[3].children[0].textContent = siteContent["main-content"]["product-h4"];
-main[3].children[1].textContent = siteContent["main-content"]["product-content"];
+// main[3].children[0].textContent = siteContent["main-content"]["product-h4"];
+// main[3].children[1].textContent = siteContent["main-content"]["product-content"];
 
-main[4].children[0].textContent = siteContent["main-content"]["vision-h4"];
-main[4].children[1].textContent = siteContent["main-content"]["vision-content"];
+// main[4].children[0].textContent = siteContent["main-content"]["vision-h4"];
+// main[4].children[1].textContent = siteContent["main-content"]["vision-content"];
+
+
+// main for loops
+
+// let headerLoop = document.querySelectorAll(".text-content h4");
+// let loremLoop = document.querySelectorAll(".text-content p");
+
+for (i = 0; i < main.length; i+=2) {
+  main[i].textContent = siteContent["main-content"][[i]];
+}
+
+
+
+// main content header
+
+// for (i = 0; i < main.length; i++){
+
+// };
+
+// main content lorem
+
+
 
 // contact
 let contact = document.querySelector(".contact");
 contact.children[0].textContent = siteContent["contact"]["contact-h4"];
 contact.children[1].textContent = siteContent["contact"]["address"];
 contact.children[2].textContent = siteContent["contact"]["phone"];
+contact.children[3].textContent = siteContent["contact"]["email"];
 
-// function for addresson two lines?
-let split = () => contact.children[1].splice(19,30);
-console.log(split);
+let address = contact.children[1].style.width = "20%";
 
 // footer
 let copyright = document.querySelector("footer");
