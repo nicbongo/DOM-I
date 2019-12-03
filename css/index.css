@@ -50,11 +50,12 @@ table {
 /* Set every element's box-sizing to border-box */
 * {
     box-sizing: border-box;
+    /* border: 1px solid grey !important; */
 }
 
 html, body {
     height: 100%;
-    font-family: 'Titillium Web', sans-serif;
+    font-family: 'Titillium Web', sans-serif;  
 }
 
 h1, h2, h3, h4, h5 {
